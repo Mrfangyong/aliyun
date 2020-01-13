@@ -8,7 +8,7 @@ from app01.alipay import AliPay
 
 def aliPay():
     obj = AliPay(
-        appid="2016102100731829",                              # 支付宝沙箱里面的APPID，需要改成你自己的
+        appid="你自己的",                              # 支付宝沙箱里面的APPID，需要改成你自己的
         app_notify_url="http://127.0.0.1:8000/update_order/",  # 如果支付成功，支付宝会向这个地址发送POST请求（校验是否支付已经完成），此地址要能够在公网进行访问，需要改成你自己的服务器地址
         return_url="http://127.0.0.1:8000/result/",            # 如果支付成功，重定向回到你的网站的地址。需要你自己改，这里是我的服务器地址
         alipay_public_key_path=settings.ALIPAY_PUBLIC,  # 支付宝公钥
